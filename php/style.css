@@ -1,0 +1,39 @@
+body {
+	padding-top:60px;
+}
+
+ul {
+	list-style:none;
+	padding-left:10px;
+}
+
+.nav li {
+	padding-left:20px;
+}
+
+.panel-collapse a, .panel-collapse a:hover {
+	color:#000000 !important;
+	text-decoration:none !important;
+}
+
+.panel-heading {
+	position:relative;
+}
+.panel-title {
+	
+	max-width:90%;
+}
+
+.panel-title a {
+	text-decoration:none !important;
+}
+.btn-sm {
+	position:absolute;
+	right:5px;
+	top:24%;
+}
+
+#delete, #save, #delete-saved {
+	margin-top:10px;
+	margin-right: 10px;
+}
