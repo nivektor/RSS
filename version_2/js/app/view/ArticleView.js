@@ -38,10 +38,6 @@ define([
 			else
 			{
 				this.renderCollection(this.collection.models, data, target);
-
-				// <script src="js/lib/backbone.paginator.js"></script> **** *****************
-				// $(target).append('<ul><li id="previous-page"><-</li></ul>');
-				// $(target).append('<ul><li id="next-page">-></li></ul>');
 			}
 			if(this.loggedIn == true)
 			{
@@ -49,23 +45,15 @@ define([
 			}
 
 	        return this;
-
-			// Hammer(el).on("doubletap", function() {
-			    // alert('you doubletapped me!');
-			// });
 	    },
 
 		events: {
 			'click h4 a': 'toggleCollapse',
-		    // 'click li#next-page': 'clickNext',
-			// 'click li#previous-page': 'clickPrevious'
 		},
 
 		hammerEvents: {
 			'dragend .panel': 'toggleDrag',
 			'touch h4 .btn-sm': 'toggleTouch',
-		    // 'click li#next-page': 'clickNext',
-			// 'click li#previous-page': 'clickPrevious'
 		},
 
 		renderCollection: function(objs, data, target) {
@@ -105,12 +93,10 @@ define([
 
 				if(e.gesture.direction == 'right')
 				{
-					// $(input).attr('Checked','Checked'); 
 					$(span).addClass('bg-primary');
 				}
 				if(e.gesture.direction == 'left')
 				{
-					// $(input).removeAttr('Checked');
 					$(span).removeClass('bg-primary');
 				}
 			}
@@ -122,10 +108,9 @@ define([
 				type: "POST",
 				url: "php/delete.php",
 				data: {array: chkArray, table: table},
-				// success: function() {
-				// 		            $("#lengthQuestion").fadeOut('slow');        
-				// 		       }
-			    });
+				success: function() {
+				}
+			});
 		},
 
 		save: function(table) {
@@ -134,10 +119,9 @@ define([
 				type: "POST",
 				url: "php/save.php",
 				data: {array: chkArray, table: table},
-				// success: function() {
-				// 		            $("#lengthQuestion").fadeOut('slow');        
-				// 		       }
-			    });
+				success: function() {
+				}
+			});
 		},
 
 		getChecked: function() {
@@ -152,12 +136,11 @@ define([
 			});
 
 			this.collection.trigger( "removeModel", chkArray );
-			console.log(chkArray)
+
 			return chkArray;
 		},
 
 		toggleCollapse: function(e) {
-			// console.log(e)
 			var group = e.currentTarget.parentElement.parentElement.parentElement.parentElement,
 			children = group.childNodes[1],
 			collapse = $(children).find('.panel-collapse')
@@ -184,27 +167,9 @@ define([
 		successOnFetchEvent: function(e)
 		{
 			this.render();
-			// this.trigger( "fetchComplete", e );
-			// console.log(this.collection)
 		},
-		//
-		// clickNext: function(e)
-		// {
-		// 	// console.log('click');
-		// 	// this.trigger( "clickArticleEvent", e );
-		// 	e.preventDefault();
-		// 	this.collection.getNextPage();
-		// 	this.render();
-		// },
-		// 
-		// clickPrevious: function(e)
-		// {
-		// 	// console.log('click');
-		// 	// this.trigger( "clickArticleEvent", e );
-		// 	e.preventDefault();
-		// 	this.collection.getPreviousPage();
-		// 	this.render();
-		// },
 	});
+	
 	return ArticleView;
+	
 });

@@ -25,11 +25,9 @@ define([
 			this.fetch({
 				reset: true,
 				success: function (collection, response, options) {
-					// you can pass additional options to the event you trigger here as well
 					self.trigger('successOnFetch', response);
 				},
 				error: function (collection, response, options) {
-				// you can pass additional options to the event you trigger here as well
 					self.trigger('errorOnFetch');
 				}
 			});

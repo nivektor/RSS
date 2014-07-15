@@ -6,17 +6,9 @@ define([
 
 	var ArticleCollection = Backbone.Collection.extend({
 		model: ArticleModel,
-		// mode: "client",
 		url: "php/articles.php",
 
-		// state: {
-		//     pageSize: 10,
-		//     sortKey: "updated",
-		//     order: 1
-		//   },
-
 	    initialize: function () {
-			// this.bind( 'addModel', this.onAddModel, this );	
 			this.bind( 'removeModel', this.onRemoveModel, this );	
 			this.sortField = 'time';
 			this.sortDirection = 'ASC';	
@@ -34,15 +26,12 @@ define([
 				this.sortDirection = 'ASC';
 				return;
 			}
-			// this.sortField = field;
-			// this.sortDirection = direction;
 		},
 
 		comparator: function (m) {
 			return m.get(this.sortField);
 		},
 
-		   // Overriding sortBy (copied from underscore and just swapping left and right for reverse sort)
 		sortBy: function (iterator, context) {
 			var obj = this.models,
 			direction = this.sortDirection;
@@ -71,11 +60,9 @@ define([
 			this.fetch({
 				reset: true,
 				success: function (collection, response, options) {
-					// you can pass additional options to the event you trigger here as well
 					self.trigger('successOnFetch');
 				},
 				error: function (collection, response, options) {
-				// you can pass additional options to the event you trigger here as well
 					self.trigger('errorOnFetch');
 				}
 			});

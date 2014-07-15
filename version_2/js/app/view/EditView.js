@@ -30,13 +30,11 @@ define([
 
 		deleteEvent: function(e)
 		{
-			console.log('click delete');
 			this.trigger( "deleteArticlesEvent", e );
 		},
 
 		saveEvent: function(e)
 		{
-			console.log('click save');
 			this.trigger( "saveArticlesEvent", e );
 		},
 

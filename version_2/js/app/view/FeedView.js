@@ -45,7 +45,6 @@ define([
 		successOnFetchEvent: function(e)
 		{
 			this.render();
-			// this.trigger( "fetchComplete", e );
 		}
 	});
 	return FeedView;

@@ -25,7 +25,6 @@ define([
 
 		updateTime: function(e)
 		{
-			// console.log(e)
 			this.set({
 				lastImportTime: new Date(e * 1000).format('F j, Y, g:i a')
 			});

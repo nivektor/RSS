@@ -10,7 +10,6 @@ define([
 
 		update: function(e)
 		{
-			console.info(e)
 			this.set({
 				id: e.attributes.id,
 				url: e.attributes.url,

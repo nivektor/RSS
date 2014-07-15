@@ -41,7 +41,6 @@ define([
 		},
 
 		testLogin: function() {
-			// console.log('click');
 			var user = $('input:text[name=user]').val(),
 			pw = $('input:password[name=password]').val();
 			this.model.set('user', user);

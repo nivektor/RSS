@@ -12,7 +12,6 @@ define([
 
 		update: function(e)
 		{
-			// console.info(e);
 			this.set({
 				id: e.attributes.id,
 				guid: e.attributes.guid,

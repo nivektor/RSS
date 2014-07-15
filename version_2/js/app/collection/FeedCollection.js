@@ -16,7 +16,6 @@ define([
 			this.fetch({
 				reset: true,
 				success: function (collection, response, options) {
-					// you can pass additional options to the event you trigger here as well
 					var lastImportTime = 0;
 					_.each(collection.models, function(model)
 					{
@@ -29,11 +28,8 @@ define([
 
 					});
 					self.trigger('successOnFetch', lastImportTime);
-					// console.log('Load Feeds...');
-
 				},
 				error: function (collection, response, options) {
-				// you can pass additional options to the event you trigger here as well
 					self.trigger('errorOnFetch');
 				}
 			});

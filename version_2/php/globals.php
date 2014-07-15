@@ -1,7 +1,7 @@
 <?php
 	global $connect,$local, $domain, $articleProxy, $feedProxy;
 	$connect = mysql_connect("localhost","root","root");
-	$local = $_SERVER["DOCUMENT_ROOT"].'RSS3/php/';
+	$local = $_SERVER["DOCUMENT_ROOT"].'GIT/nivektor/RSS/version_2/php/';
 	$domain = 'localhost';
 	
 	$table = 'entry';
