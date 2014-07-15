@@ -1,0 +1,88 @@
+body {
+	padding-top:60px;
+}
+
+ul {
+	list-style:none;
+	padding-left:10px;
+}
+
+.nav li {
+/*	padding-left:20px;*/
+}
+
+.panel-collapse a, .panel-collapse a:hover {
+	color:#000000 !important;
+	text-decoration:none !important;
+}
+
+.panel-heading {
+	position:relative;
+	height:70px;
+}
+
+@media (max-width: 768px) {
+	.panel-heading {
+		height:100%;
+		min-height:70px;
+	}
+	.panel-title {
+/*		max-width:65%;*/
+	}
+}
+
+.panel-title {
+/*	max-height:80px;*/
+	max-width:90%;
+/*	overflow:hidden;*/
+}
+
+.panel-title a {
+	text-decoration:none !important;
+}
+.btn-sm {
+	position:absolute;
+	right:5px;
+	top:24%;
+}
+
+#delete, #save, #delete-saved {
+	margin-top:10px;
+	margin-right: 10px;
+}
+
+img.thumb {
+	height:50px;
+	width:50px;
+	margin-right:10px;
+	margin-bottom:7px;
+}
+
+#time-container {
+	margin-top:15px;
+}
+
+.navbar-form {
+	margin-top:4px;
+	margin-bottom:0;
+}
+
+.navbar-form input {
+	margin-right:4px;
+}
+
+.dropup button {
+	margin-top:12px;
+}
+
+#articles-containter {
+	margin-bottom:80px;
+}
+
+#sort-container {
+	display:inline;
+}
+
+button#all {
+	margin-right:33%;
+}
