@@ -1,4 +1,3 @@
-// Filename: router.js
 define([
 	'jquery',
 	'underscore',
@@ -46,7 +45,6 @@ define([
 			{
 				this.validLoginHandler();
 			}
-
 		},
 		
 		setLastImportTime: function(e) {
