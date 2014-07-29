@@ -17,6 +17,7 @@ define([
 
 	    render: function() {
 			var target = this.el;
+            // console.log(JSON.stringify(this.collection))
 			$(target).empty();
 			
 			_.each(this.collection.models, function(model)

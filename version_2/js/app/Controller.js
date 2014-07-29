@@ -19,6 +19,7 @@ define([
 		},
 		
 		startUp: function() {
+		    currentTable = 'entry';
 			infoView = new InfoView();
 			
 			feedView = new FeedView();

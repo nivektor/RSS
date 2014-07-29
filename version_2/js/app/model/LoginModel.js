@@ -7,9 +7,7 @@ define([
 	var LoginModel = Backbone.Model.extend({
 		url: 'php/login.php',
 
-		initialize: function () {
-			this.bind( 'updateTitle', this.updateTitle, this );	
-			this.bind( 'updateTime', this.updateTime, this );	
+		initialize: function () {	
 		},
 
 		defaults: {
