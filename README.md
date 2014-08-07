@@ -1,4 +1,4 @@
 RSS
 ===
 
-Experiments with RSS feeds
+Experiments with RSS aggregation.
