@@ -48,7 +48,7 @@ define([
 	    },
 
 		events: {
-			'click h4 a': 'toggleCollapse',
+			'click h4': 'toggleCollapse',
 		},
 
 		hammerEvents: {
@@ -141,7 +141,7 @@ define([
 		},
 
 		toggleCollapse: function(e) {
-			var group = e.currentTarget.parentElement.parentElement.parentElement.parentElement,
+			var group = e.currentTarget.parentElement.parentElement.parentElement,
 			children = group.childNodes[1],
 			collapse = $(children).find('.panel-collapse')
 			$(collapse).collapse('toggle');
