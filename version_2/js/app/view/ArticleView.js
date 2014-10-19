@@ -48,7 +48,7 @@ define([
 	    },
 
 		events: {
-			'click h4': 'toggleCollapse',
+			'click img': 'toggleCollapse',
 		},
 
 		hammerEvents: {
@@ -131,7 +131,7 @@ define([
 				{
 					var span = $(this).parent().get(0),
 					group = $(span).parent().get(0);
-					chkArray.push($(group).find('a').attr('href'));
+					chkArray.push($(group).find('img').attr('href'));
 				}
 			});
 
